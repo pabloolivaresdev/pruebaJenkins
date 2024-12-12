@@ -1,0 +1,42 @@
+<div>
+   <h3>Aprender NUnit</h3>
+</div>
+<form style="margin-top: 2rem;">
+   <div class="grid" style="width: 200px;">
+    
+         <label for="inputTitulo">Título tarea</label>
+         <input
+           id="inputTitulo"
+           type="text"
+           [(ngModel)]="titulo"
+           placeholder="Ingresa nueva tarea"
+           [ngModelOptions]="{standalone: true}"
+           required="true"
+         />
+
+    
+      
+   </div>
+   <div style="margin-top: 1rem;">
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" [(ngModel)]="completada" [ngModelOptions]="{standalone: true}" id="checkBox">
+         <label class="form-check-label" for="checkBox">
+           ¿Completada?
+         </label>
+       </div>
+   </div>
+   <div>
+
+      <button style="margin-top: 1rem;" (click)="agregarTarea()">Agregar</button>
+   </div>
+</form>
+
+<div style="margin-top: 2rem; margin-bottom: 2rem;">Listado de tareas:</div>
+<div *ngFor="let tarea of tareas">
+   <div class="grid">
+      <div>ID: <b>{{tarea?.id}}</b></div>
+      <div>Nombre: <b>{{tarea?.titulo}}</b></div>
+      <div>Completada: <b>{{(tarea?.completada)? 'SÍ':'NO'}}</b></div>
+      <hr>
+   </div>
+</div>

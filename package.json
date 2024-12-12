@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@angular/common": "^19.0.3",
+    "http": "^0.0.1-security"
+  }
+}
