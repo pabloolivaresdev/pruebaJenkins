@@ -24,7 +24,7 @@ namespace TareasApi.Tests {
 		  [Test]
 		  public void CrearTarea_DeberiaAgregarUnaNuevaTarea() {
 				var nuevaTarea = new Tarea { Titulo = "Nueva Tarea", Completada = false };
-				var resultado = _controller.CrearTarea(nuevaTarea) as CreatedAtActionResult;
+				var resultado = _controller.CrearTarea() as CreatedAtActionResult;
 
 				Assert.NotNull(resultado);
 				var tareaCreada = resultado.Value as Tarea;
