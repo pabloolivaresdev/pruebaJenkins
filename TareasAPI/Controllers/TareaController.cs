@@ -20,13 +20,11 @@ namespace TareasAPI.Controllers {
 				return Tareas;
 		  }
 
-		  [HttpPost]
-		  public IActionResult CrearTarea() {
-				Tarea vTarea = System.Text.Json.JsonSerializer.Deserialize<Tarea>(Request.Form["prmTarea"]);
-				vTarea.Id = Tareas.Max(t => t.Id) + 1;
-				Tareas.Add(vTarea);
-				return CreatedAtAction(nameof(ObtenerTareas), new { id = vTarea.Id }, vTarea);
-		  }
-	 }
+        [HttpPost] public IActionResult CrearTarea([FromBody] Tarea nuevaTarea) { 
+			nuevaTarea.Id = Tareas.Max(t => t.Id) + 1; 
+			Tareas.Add(nuevaTarea); 
+			return CreatedAtAction(nameof(ObtenerTareas), new { id = nuevaTarea.Id }, nuevaTarea); 
+		}
+    }
 }
 
