@@ -25,7 +25,7 @@
     <PackageJsonDevdependenciesAngularCommon Condition="$(PackageJsonDevdependenciesAngularCommon) == ''">^17.3.12</PackageJsonDevdependenciesAngularCommon>
     <PackageJsonDevdependenciesAngularCompilerCli Condition="$(PackageJsonDevdependenciesAngularCompilerCli) == ''">^17.3.0</PackageJsonDevdependenciesAngularCompilerCli>
     <PackageJsonDevdependenciesTypesJasmine Condition="$(PackageJsonDevdependenciesTypesJasmine) == ''">~5.1.0</PackageJsonDevdependenciesTypesJasmine>
-    <PackageJsonDevdependenciesCypress Condition="$(PackageJsonDevdependenciesCypress) == ''">^13.16.1</PackageJsonDevdependenciesCypress>
+    <PackageJsonDevdependenciesCypress Condition="$(PackageJsonDevdependenciesCypress) == ''">^13.17.0</PackageJsonDevdependenciesCypress>
     <PackageJsonDevdependenciesHttp Condition="$(PackageJsonDevdependenciesHttp) == ''">^0.0.1-security</PackageJsonDevdependenciesHttp>
     <PackageJsonDevdependenciesJasmineCore Condition="$(PackageJsonDevdependenciesJasmineCore) == ''">~5.1.0</PackageJsonDevdependenciesJasmineCore>
     <PackageJsonDevdependenciesKarma Condition="$(PackageJsonDevdependenciesKarma) == ''">~6.4.0</PackageJsonDevdependenciesKarma>

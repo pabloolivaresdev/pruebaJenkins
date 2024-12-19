@@ -2,5 +2,8 @@
   "devDependencies": {
     "@angular/common": "^19.0.3",
     "http": "^0.0.1-security"
+  },
+  "dependencies": {
+    "cypress": "^13.17.0"
   }
 }
