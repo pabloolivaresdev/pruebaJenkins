@@ -31,7 +31,7 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI') {
+                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
                         bat "test.bat"
