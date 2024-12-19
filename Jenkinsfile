@@ -96,12 +96,4 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Siempre archivar el archivo TRX como artefacto
-            archiveArtifacts artifacts: 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.trx', allowEmptyArchive: true
-        }
-    }
-
-
 }
