@@ -34,7 +34,7 @@ pipeline {
                 dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
-                        bat "dotnet test"
+                        bat "dotnet test --logger:nunit"
                     }
                 }
             }
