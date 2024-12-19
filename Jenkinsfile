@@ -31,10 +31,10 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
+                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI') {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
-                        bat "dotnet test --logger:nunit"
+                        bat "test.bat"
                     }
                 }
             }
@@ -92,6 +92,7 @@ pipeline {
 
     post {
         always {
+             junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.trx'
             // Limpiar, por ejemplo, eliminar imágenes de Docker si las creaste
             cleanWs()
         }
