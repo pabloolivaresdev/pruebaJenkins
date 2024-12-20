@@ -92,7 +92,8 @@ pipeline {
 
     post {
         always {
-             junit 'TestResult\\result.trx'
+            nunit testResultsPattern: 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.trx' 
+            //junit 'TestResult\\result.trx'
         }
     }
 
