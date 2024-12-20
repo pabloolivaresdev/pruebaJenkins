@@ -94,7 +94,7 @@ pipeline {
             steps {
                 script {
                     bat 'echo finalizando'
-                    junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult.result.xml'
+                    junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.xml'
                 }
             }
         }
@@ -102,7 +102,7 @@ pipeline {
 
     post {
         always {
-               junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult.result.xml'
+               junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\prueba.xml'
         }
     }
 
