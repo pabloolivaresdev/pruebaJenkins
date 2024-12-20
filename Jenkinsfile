@@ -94,7 +94,7 @@ pipeline {
 
     post {
         always {
-            //junit 'TestResult\\result.trx'
+            junit 'TestResult\\result.trx'
         }
     }
 
