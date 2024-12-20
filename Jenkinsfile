@@ -35,6 +35,7 @@ pipeline {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
                         bat "test.bat"
+                        bat "trx2junit 'TestResult\\result.trx'"
                     }
                 }
             }
@@ -92,7 +93,7 @@ pipeline {
 
     post {
         always {
-            nunit testResultsPattern: 'TestResult\\result.trx' 
+            junit testResultsPattern: 'TestResult\\result.trx' 
             //junit 'TestResult\\result.trx'
         }
     }
