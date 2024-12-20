@@ -35,7 +35,7 @@ pipeline {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
                         bat "test.bat"
-                        bat "trx2junit 'TestResult\\result.trx'"
+                        bat "trx2junit TestResult\\result.trx"
                     }
                 }
             }
