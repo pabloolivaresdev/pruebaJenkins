@@ -1,8 +1,5 @@
 pipeline {
     agent any
-     tools {
-        dotnet 'dotnet-sdk-6.0'
-    }
     environment {
         // Definir variables de entorno para la ruta de tu proyecto y las versiones de .NET necesarias
         DOTNET_VERSION = '8.0' // Ajusta la versión de .NET a la que usas
