@@ -86,6 +86,7 @@ pipeline {
             steps {
                 script {
                     bat 'echo finalizando'
+                    junit 'TestResult\\result.trx'
                 }
             }
         }
@@ -93,7 +94,6 @@ pipeline {
 
     post {
         always {
-            junit 'TestResult\\result.trx' 
             //junit 'TestResult\\result.trx'
         }
     }
