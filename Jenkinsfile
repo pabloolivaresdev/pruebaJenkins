@@ -35,7 +35,7 @@ pipeline {
                     script {
                         // Ejecutar pruebas unitarias del proyecto .NET
                         bat "test.bat"
-                        bat "trx2junit C:\Users\pablo.olivares\Documents\GitHub\pruebaJenkins\TareasAPI"
+                        bat "trx2junit C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI"
                     }
                 }
             }
