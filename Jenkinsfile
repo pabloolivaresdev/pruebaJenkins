@@ -82,6 +82,17 @@ pipeline {
             }
         }
 
+        stage('Verify Test Results') {
+            steps {
+                script {
+                    def file = new File('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.trx')
+                    if (!file.exists()) {
+                        error "El archivo result.trx no existe en la ruta especificada."
+                    }
+                }
+            }
+        }
+        
         stage('Publish Test Results') {
             steps {
                 script {
