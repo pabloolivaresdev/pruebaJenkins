@@ -96,7 +96,7 @@ pipeline {
 
     post {
         always {
-            junit testResultsPattern: 'TestResult\\result.trx' 
+            junit 'TestResult\\result.trx' 
             //junit 'TestResult\\result.trx'
         }
     }
