@@ -5,5 +5,5 @@ RUN npm install
 RUN npm run build --prod
 
 FROM nginx:alpine
-COPY --from=build /dist/sistemita-tareas/browser /usr/share/nginx/html
+COPY --from=build /SistemitaTareas/dist/sistemita-tareas/browser /usr/share/nginx/html
 EXPOSE 80

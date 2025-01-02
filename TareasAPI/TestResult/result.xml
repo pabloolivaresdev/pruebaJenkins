@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-  <testsuite name="TareasApi.Tests.TareasControllerTests" hostname="PABLO-O-PC" package="not available" id="0" tests="2" failures="0" errors="0" skipped="0" time="0.021" timestamp="2025-01-02T20:15:06">
+  <testsuite name="TareasApi.Tests.TareasControllerTests" hostname="PABLO-O-PC" package="not available" id="0" tests="2" failures="0" errors="0" skipped="0" time="0.020" timestamp="2025-01-02T20:35:07">
     <properties />
     <testcase name="ObtenerTareas_DeberiaRetornarListaDeTareas" classname="TareasApi.Tests.TareasControllerTests" time="0.001" status="1" />
     <testcase name="CrearTarea_DeberiaAgregarUnaNuevaTarea" classname="TareasApi.Tests.TareasControllerTests" time="0.019" status="1" />
