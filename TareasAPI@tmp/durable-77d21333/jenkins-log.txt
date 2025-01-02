@@ -1,0 +1,2 @@
+
+C:\Users\pablo.olivares\Documents\GitHub\pruebaJenkins\TareasAPI>start dotnet run 
