@@ -5,5 +5,5 @@ RUN npm install
 RUN npm run build --prod
 
 FROM nginx:alpine
-COPY --from=build /app/dist/microservice-frontend/browser /usr/share/nginx/html
+COPY --from=build /dist/sistemita-tareas/browser /usr/share/nginx/html
 EXPOSE 80
