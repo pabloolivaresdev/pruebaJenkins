@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="3a848735-ca90-41fc-8a06-e2b22e48ddb3" name="PABLO-O-PC$@PABLO-O-PC 2025-01-02 17:35:08" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-01-02T17:35:08.0461022-03:00" queuing="2025-01-02T17:35:08.0461026-03:00" start="2025-01-02T17:35:07.0449351-03:00" finish="2025-01-02T17:35:08.0554968-03:00" />
-  <TestSettings name="default" id="1eaf2f1d-8a41-4480-a482-d8cba7dcf531">
-    <Deployment runDeploymentRoot="PABLO-O-PC$_PABLO-O-PC_2025-01-02_17_35_08" />
+<TestRun id="09dcf31a-62cb-4d05-b027-4666e67ee742" name="PABLO-O-PC$@PABLO-O-PC 2025-01-02 17:46:48" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-01-02T17:46:48.7781511-03:00" queuing="2025-01-02T17:46:48.7781514-03:00" start="2025-01-02T17:46:47.0505777-03:00" finish="2025-01-02T17:46:48.7878590-03:00" />
+  <TestSettings name="default" id="ce6788bd-a780-4463-a16c-3b83d7b74bb2">
+    <Deployment runDeploymentRoot="PABLO-O-PC$_PABLO-O-PC_2025-01-02_17_46_48" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="1ec9cf41-dd3a-46d1-82b3-34fb632c337c" testId="f0f21f1c-ffba-7bad-4c45-138a7c4194d0" testName="ObtenerTareas_DeberiaRetornarListaDeTareas" computerName="PABLO-O-PC" duration="00:00:00.0013550" startTime="2025-01-02T17:35:07.8620309-03:00" endTime="2025-01-02T17:35:07.8633858-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ec9cf41-dd3a-46d1-82b3-34fb632c337c" />
-    <UnitTestResult executionId="46f25426-3cd8-4e56-bab3-3e38d048acbb" testId="fe593c72-e56c-0a44-8d10-e13a7ca0b6b8" testName="CrearTarea_DeberiaAgregarUnaNuevaTarea" computerName="PABLO-O-PC" duration="00:00:00.0191280" startTime="2025-01-02T17:35:07.8406953-03:00" endTime="2025-01-02T17:35:07.8597317-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46f25426-3cd8-4e56-bab3-3e38d048acbb" />
+    <UnitTestResult executionId="c8c3ef4a-d37b-421d-980d-739bcf25049f" testId="f0f21f1c-ffba-7bad-4c45-138a7c4194d0" testName="ObtenerTareas_DeberiaRetornarListaDeTareas" computerName="PABLO-O-PC" duration="00:00:00.0013590" startTime="2025-01-02T17:46:48.6137718-03:00" endTime="2025-01-02T17:46:48.6151316-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8c3ef4a-d37b-421d-980d-739bcf25049f" />
+    <UnitTestResult executionId="73fd3e60-d7ec-4033-9ed4-fc97b0777cc9" testId="fe593c72-e56c-0a44-8d10-e13a7ca0b6b8" testName="CrearTarea_DeberiaAgregarUnaNuevaTarea" computerName="PABLO-O-PC" duration="00:00:00.0162040" startTime="2025-01-02T17:46:48.5919839-03:00" endTime="2025-01-02T17:46:48.6080806-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73fd3e60-d7ec-4033-9ed4-fc97b0777cc9" />
   </Results>
   <TestDefinitions>
     <UnitTest name="ObtenerTareas_DeberiaRetornarListaDeTareas" storage="c:\users\pablo.olivares\documents\github\pruebajenkins\tareasapi.tests\bin\debug\net8.0\tareasapi.tests.dll" id="f0f21f1c-ffba-7bad-4c45-138a7c4194d0">
-      <Execution id="1ec9cf41-dd3a-46d1-82b3-34fb632c337c" />
+      <Execution id="c8c3ef4a-d37b-421d-980d-739bcf25049f" />
       <TestMethod codeBase="C:\Users\pablo.olivares\Documents\GitHub\pruebaJenkins\TareasAPI.Tests\bin\Debug\net8.0\TareasAPI.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="TareasApi.Tests.TareasControllerTests" name="ObtenerTareas_DeberiaRetornarListaDeTareas" />
     </UnitTest>
     <UnitTest name="CrearTarea_DeberiaAgregarUnaNuevaTarea" storage="c:\users\pablo.olivares\documents\github\pruebajenkins\tareasapi.tests\bin\debug\net8.0\tareasapi.tests.dll" id="fe593c72-e56c-0a44-8d10-e13a7ca0b6b8">
-      <Execution id="46f25426-3cd8-4e56-bab3-3e38d048acbb" />
+      <Execution id="73fd3e60-d7ec-4033-9ed4-fc97b0777cc9" />
       <TestMethod codeBase="C:\Users\pablo.olivares\Documents\GitHub\pruebaJenkins\TareasAPI.Tests\bin\Debug\net8.0\TareasAPI.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="TareasApi.Tests.TareasControllerTests" name="CrearTarea_DeberiaAgregarUnaNuevaTarea" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="f0f21f1c-ffba-7bad-4c45-138a7c4194d0" executionId="1ec9cf41-dd3a-46d1-82b3-34fb632c337c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fe593c72-e56c-0a44-8d10-e13a7ca0b6b8" executionId="46f25426-3cd8-4e56-bab3-3e38d048acbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0f21f1c-ffba-7bad-4c45-138a7c4194d0" executionId="c8c3ef4a-d37b-421d-980d-739bcf25049f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe593c72-e56c-0a44-8d10-e13a7ca0b6b8" executionId="73fd3e60-d7ec-4033-9ed4-fc97b0777cc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />

@@ -38,6 +38,16 @@ pipeline {
             }
         }
 
+        stage('Run Web Api') {
+            steps {
+                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI') {
+                    script {
+                        bat "start dotnet run"
+                    }
+                }
+            }
+        }
+
         stage('Build Docker Image for Frontend') {
             steps {
                 dir('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\SistemitaTareas') {
