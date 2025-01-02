@@ -86,20 +86,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Publish Test Results') {
-            steps {
-                script {
-                    bat 'echo finalizando'
-                    junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.xml'
-                }
-            }
-        }
-    }
-
-    post {
-        always {
-            junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\prueba.xml'
-        }
     }
 }
