@@ -1,28 +1,26 @@
 pipeline {
     agent any
     environment {
-        // Definir variables de entorno para la ruta de tu proyecto y las versiones de .NET necesarias
-        DOTNET_VERSION = '8.0' // Ajusta la versión de .NET a la que usas
+        DOTNET_VERSION = '8.0'
         CYPRESS_CACHE_FOLDER = "${WORKSPACE}/.cache/Cypress"
+        DOCKER_IMAGE_NAME = 'frontend-image' // Cambia por el nombre de tu imagen
     }
     stages {
         stage('Restore NuGet Packages') {
             steps {
                 dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
                     script {
-                        // Restaurar paquetes de NuGet
                         bat "dotnet clean"
-                        bat "dotnet restore" // En caso de ser Linux/macOS, usar ./dotnet restore
+                        bat "dotnet restore"
                     }
                 }
             }
         }
 
-        stage('Build') {
+        stage('Build Backend') {
             steps {
                 dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
                     script {
-                        // Compilar el proyecto
                         bat "dotnet build --configuration Release"
                     }
                 }
@@ -33,7 +31,6 @@ pipeline {
             steps {
                 dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins') {
                     script {
-                        // Ejecutar pruebas unitarias del proyecto .NET
                         bat "test.bat"
                         bat "trx2junit C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\result.trx"
                     }
@@ -41,42 +38,32 @@ pipeline {
             }
         }
 
-        stage('Run WebAPI') {
+        stage('Build Docker Image for Frontend') {
             steps {
-                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI') {
+                dir('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\SistemitaTareas') {
                     script {
-                        // Ejecutar pruebas unitarias del proyecto .NET
-                        bat "start dotnet run"
+                        // Construir la imagen Docker
+                        bat "docker build -t ${DOCKER_IMAGE_NAME} ."
                     }
                 }
             }
         }
 
-        stage('Run Front-End') {
+        stage('Run Frontend in Docker') {
             steps {
-                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\SistemitaTareas') {
-                    script {
-                        // Asegurarse de tener Node.js y Cypress instalados
-                        // Ejecutar las pruebas de Cypress para la API Web
-                        bat "npm install"
-                        bat "start npx ng serve --port 4200"
-                        echo 'Please let me Sleep 30 seconds more'
-                        sleep(time:10, unit: "SECONDS") // Para instalar dependencias de Node.js (si no las tienes en un contenedor, instálalas en este paso)
-                        bat "curl http://localhost:4200"
-                        //bat 'start "" ng serve --port 4200' // Cambia el puerto según corresponda
-                    }
+                script {
+                    // Ejecutar la imagen Docker del frontend
+                    bat "docker run -d -p 4200:80 ${DOCKER_IMAGE_NAME}"
                 }
             }
         }
 
         stage('Run Cypress Tests') {
             steps {
-                dir ('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\SistemitaTareas') {
+                dir('C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\SistemitaTareas') {
                     script {
-                        // Asegurarse de tener Node.js y Cypress instalados
-                        // Ejecutar las pruebas de Cypress para la API Web
                         bat "npx cypress install"
-                        bat "npx cypress run --config baseUrl=http://localhost:4200" // Cambia el puerto según corresponda
+                        bat "npx cypress run --config baseUrl=http://localhost:4200"
                     }
                 }
             }
@@ -89,7 +76,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Publish Test Results') {
             steps {
                 script {
@@ -102,8 +89,7 @@ pipeline {
 
     post {
         always {
-               junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\prueba.xml'
+            junit 'C:\\Users\\pablo.olivares\\Documents\\GitHub\\pruebaJenkins\\TareasAPI\\TestResult\\prueba.xml'
         }
     }
-
 }
